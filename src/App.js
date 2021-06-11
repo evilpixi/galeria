@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import "./assets/css/App.css"
+import datosLocal from "./datos/datos.js"
+
+import Entrada from "./components/Entrada"
+import Modal from "./components/Modal"
+
+//console.log(datosLocal)
+console.clear()
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <section className="entradas">
+        <Entrada datos={datosLocal}/>
+      </section>
+      {/* <Modal /> */}
     </div>
   );
 }
